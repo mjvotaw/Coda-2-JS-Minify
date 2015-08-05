@@ -9,7 +9,7 @@ If you haven't, [check out Coda as well!](http://panic.com/coda/)
 
 Installation
 ------------
-[Download and manually install the plugin from github](https://github.com/mjvotaw/Coda-2-LESS-Compiler/raw/master/LESSCompile.codaplugin.zip)
+[Download and manually install the plugin from github](https://github.com/mjvotaw/Coda-2-JS-Minify/raw/master/JSMinify.codaplugin.zip)
 (This will be officially released soon, once it's gotten in the hands of a couple more people).
 
 What does this do?
@@ -37,7 +37,7 @@ If you're still using Coda 2.0.x, the plugin cannot mark the compiled files for 
 
 Improvements
 ------------
-If you have any ideas for how this plugin can work better, or any feature requests, please let me know by [opening an issue in the issue tracker](https://github.com/mjvotaw/Coda-2-LESS-Compiler/issues/new).
+If you have any ideas for how this plugin can work better, or any feature requests, please let me know by [opening an issue in the issue tracker](https://github.com/mjvotaw/Coda-2-JS-Minify/issues/new).
 
 
 Change Log
