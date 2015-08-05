@@ -1,8 +1,4 @@
 #import "JSMBaseCodaPlugin.h"
-#import "DDLog.h"
-#import "DDASLLogger.h"
-
-static int ddLogLevel = LOG_LEVEL_ERROR;
 
 @interface JSMBaseCodaPlugin ()
 
@@ -262,7 +258,7 @@ static int ddLogLevel = LOG_LEVEL_ERROR;
 
 -(NSArray *) loadNibNamed:(NSString *)nibName
 {
-    DDLogVerbose(@"JSMinify:: loading nib: %@", nibName);
+    //DDLogVerbose(@"JSMinify:: loading nib: %@", nibName);
     NSMutableArray * nibObjects = [NSMutableArray array];
     if([_bundle respondsToSelector:@selector(loadNibNamed:owner:topLevelObjects:)])
     {

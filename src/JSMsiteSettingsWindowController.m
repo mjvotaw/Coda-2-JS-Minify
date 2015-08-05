@@ -8,11 +8,7 @@
 
 #import "JSMsiteSettingsWindowController.h"
 #import "JSMDb.h"
-#import "DDLog.h"
-#import "DDASLLogger.h"
 #import "FileView.h"
-
-static int ddLogLevel;
 
 @interface JSMsiteSettingsWindowController ()
 
@@ -25,14 +21,14 @@ static int ddLogLevel;
     if(self = [super initWithWindowNibName:@"JSMsiteSettingsWindowController"])
     {
         Ldb = [JSMDb sharedLessDb];
-        DDLogVerbose(@"JSMinify:: siteSettingsWindowController init'd");
+        
     }
     return self;
 }
 
 - (void)windowDidLoad {
     [super windowDidLoad];
-    DDLogVerbose(@"JSMinify:: windowDidLoad fired.");
+    
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     [self.fileDropView setDelegate:self];
     [self.window setDelegate:Ldb.delegate];
@@ -139,7 +135,7 @@ static int ddLogLevel;
 
 -(void) rebuildFileList
 {
-    DDLogVerbose(@"JSMinify:: rebuildFileList");
+    
     [Ldb updateParentFilesList];
     [fileDocumentView setSubviews:[NSArray array]];
     
@@ -169,7 +165,7 @@ static int ddLogLevel;
         
         if(f == nil)
         {
-            DDLogError(@"JSMinify:: Error loading nib FileView");
+            
         }
         
         
@@ -202,7 +198,7 @@ static int ddLogLevel;
 
 -(void) updateFileViewOptions
 {
-    DDLogVerbose(@"JSMinify:: updateFileViewOptions");
+    
     for(JSMFileView * f in fileViews)
     {
         JSFiles * currentFile = [Ldb.currentParentFiles objectAtIndex:f.fileIndex];
@@ -305,7 +301,7 @@ static int ddLogLevel;
                 continue;
             }
             NSURL * aUrl = [NSURL URLWithString:aPath];
-            DDLogVerbose(@"JSMinify:: dragged urL: %@", aUrl);
+            
 //            [Ldb performSelectorOnMainThread:@selector(registerFile:) withObject:aUrl waitUntilDone:true];
             [Ldb registerFile:aUrl];
         }

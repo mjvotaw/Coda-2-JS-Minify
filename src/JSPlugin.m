@@ -1,10 +1,7 @@
 #import "JSPlugin.h"
 #import "CodaPlugInsController.h"
-#import "DDLog.h"
-#import "DDASLLogger.h"
 #import "FileView.h"
 
-static int ddLogLevel = LOG_LEVEL_VERBOSE;
 @interface JSPlugin ()
 
 - (id)initWithController:(CodaPlugInsController*)inController;
@@ -24,7 +21,6 @@ static int ddLogLevel = LOG_LEVEL_VERBOSE;
 //2.0.1 and higher
 - (id)initWithPlugInController:(CodaPlugInsController*)aController plugInBundle:(NSObject <CodaPlugInBundle> *)p
 {
-    [DDLog addLogger:[DDASLLogger sharedInstance]];
     return [self initWithController:aController andPlugInBundle:p];
 }
 
@@ -35,7 +31,6 @@ static int ddLogLevel = LOG_LEVEL_VERBOSE;
         [self registerActions];
         Ldb = [[JSMDb alloc] initWithDelegate:self];
         [Ldb setupDb];
-        [Ldb setupLog];
     }
 	return self;
 }
@@ -81,7 +76,7 @@ static int ddLogLevel = LOG_LEVEL_VERBOSE;
         NSURL *url = [NSURL fileURLWithPath:path isDirectory:NO];
         if([[url pathExtension] isEqualToString:@"js"])
         {
-            [self performSelector:@selector(handleLessFile:) withObject:[self getResolvedPathForPath:path] afterDelay:0.01];
+            [self performSelector:@selector(handleJSFile:) withObject:[self getResolvedPathForPath:path] afterDelay:0.01];
 //            [self performSelectorOnMainThread:@selector(handleLessFile:) withObject:textView waitUntilDone:true];
         }
     }
@@ -133,32 +128,33 @@ static int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark - LESS methods
 
--(void) handleLessFile:(NSString *)path
+-(void) handleJSFile:(NSString *)path
 {
-    if(isCompiling || Ldb.isDepenencying || (task!= nil && [task isRunning]))
+    if(isCompiling || (task!= nil && [task isRunning]))
     {
-        DDLogVerbose(@"JSMinify:: Compilation already happening!");
+        
         return;
     }
     
-    DDLogVerbose(@"JSMinify:: ++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-    DDLogVerbose(@"JSMinify:: Handling file: %@", path);
     
-    NSDictionary * parent = [Ldb getParentForFilepath:path];
+    
+    
+    
+    JSFiles * parent = [Ldb JSFileForFilePath:path];
     if(parent == nil)
     {
         return;
     }
-    NSString * parentPath = [parent objectForKey:@"path"];
-    NSString * cssPath = [parent objectForKey:@"minified_path"];
+    NSString * parentPath = parent.path;
+    NSString * cssPath = parent.minified_path;
     
     
-    DDLogVerbose(@"JSMinify:: parent Path: %@", parentPath);
-    DDLogVerbose(@"JSMinify:: css Path: %@", cssPath);
+    
+    
     
     //Set compilation options
     NSMutableArray * options  = [NSMutableArray array];
-    NSData * optionsData = [parent objectForKey:@"options"];
+    NSData * optionsData = [parent.options dataUsingEncoding:NSUTF8StringEncoding];
     
     if(optionsData != nil && ![optionsData isEqual:[NSNull null]])
     {
@@ -175,21 +171,21 @@ static int ddLogLevel = LOG_LEVEL_VERBOSE;
         }
     }
     
-    DDLogVerbose(@"JSMinify:: compiling");
+    
     int resultCode = [self compileFile:parentPath toFile:cssPath withOptions:options];
 }
 
 -(int) compileFile:(NSString *)lessFile toFile:(NSString *)cssFile withOptions:(NSArray *)options
 {
-    if(isCompiling || Ldb.isDepenencying || (task!= nil && [task isRunning]))
+    if(isCompiling || (task!= nil && [task isRunning]))
     {
-        DDLogVerbose(@"JSMinify:: Compilation task is already running.");
+        
         return -1;
     }
     isCompiling = true;
     compileCount++;
-    DDLogVerbose(@"JSMinify:: Compiling file: %@ to file: %@", lessFile, cssFile);
-    DDLogVerbose(@"JSMinify:: Compile count: %d", compileCount);
+    
+    
 
     NSString * launchPath = [NSString stringWithFormat:@"%@/node", [self.pluginBundle resourcePath]];
     NSString * lessc = [NSString stringWithFormat:@"%@/uglify/bin/uglifyjs", [self.pluginBundle resourcePath]];
@@ -209,7 +205,7 @@ static int ddLogLevel = LOG_LEVEL_VERBOSE;
 
     [arguments addObject:@"--output"];
     [arguments addObject:cssFile];
-    DDLogVerbose(@"JSMinify:: Node arguments: %@", arguments);
+    
     
     
     
@@ -218,8 +214,8 @@ static int ddLogLevel = LOG_LEVEL_VERBOSE;
     outputText = [task getOutput];
     errorText = [task getError];
     int resultCode = [task resultCode];
-    DDLogVerbose(@"JSMinify:: Task terminated with status: %d", resultCode);
-    DDLogVerbose(@"JSMinify:: =====================================================");
+    
+    
     
     if(resultCode == 0)
     {
@@ -241,29 +237,29 @@ static int ddLogLevel = LOG_LEVEL_VERBOSE;
 {
     NSError * error = nil;
     NSDictionary * output = nil;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(.*?)Error:(.*?) in (.*?less) on line (.*?), column (.*?):" options:nil error:&error];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"Parse error at (.*?):(\\d*),(\\d*)\\n(.*?)\\nError" options:nil error:&error];
+//    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(.*?)Error:(.*?) in (.*?less) on line (.*?), column (.*?):" options:nil error:&error];
     
     NSArray * errorList = [regex matchesInString:fullError options:nil range:NSMakeRange(0, [fullError length])];
     for(NSTextCheckingResult * ntcr in errorList)
     {
-        NSString * errorType = 	  [fullError substringWithRange:[ntcr rangeAtIndex:1]];
-        NSString * errorName = 	  [fullError substringWithRange:[ntcr rangeAtIndex:2]];
-        NSString * filePath = 	  [fullError substringWithRange:[ntcr rangeAtIndex:3]];
-        NSString * fileName = 	  [[fullError substringWithRange:[ntcr rangeAtIndex:3]] lastPathComponent];
-        NSNumber * lineNumber =   [NSNumber numberWithInteger: [[fullError substringWithRange:[ntcr rangeAtIndex:4]] integerValue]];
-        NSNumber * columnNumber = [NSNumber numberWithInteger: [[fullError substringWithRange:[ntcr rangeAtIndex:5]] integerValue]];
+        NSString * filePath = 	  [fullError substringWithRange:[ntcr rangeAtIndex:1]];
+        NSString * fileName = [filePath lastPathComponent];
         
-        NSString * errorMessage = [NSString stringWithFormat:@"%@ in %@, on line %@ column %@", errorName, fileName, lineNumber, columnNumber];
+        NSString * lineNumber = 	  [fullError substringWithRange:[ntcr rangeAtIndex:2]];
+        NSString * columnNumber = 	  [fullError substringWithRange:[ntcr rangeAtIndex:3]];
+        NSString * error = 	  [fullError substringWithRange:[ntcr rangeAtIndex:4]];
+        
+        NSString * errorMessage = [NSString stringWithFormat:@"Error in %@, at %@,%@:\n%@", fileName, lineNumber, columnNumber, error];
         
         output = @{@"errorMessage": errorMessage,
-                   @"errorType": errorType,
+                   @"errorType": error,
                    @"filePath": filePath,
                    @"fileName": fileName,
                    @"lineNumber":lineNumber,
                    @"columnNumber":columnNumber};
         
     }
-    DDLogVerbose(@"JSMinify:: Error: %@", output);
     return output;
 }
 
@@ -319,7 +315,7 @@ static int ddLogLevel = LOG_LEVEL_VERBOSE;
             CodaTextView * errorTextView = [self.controller openFileAtPath:[error objectForKey:@"filePath"] error:&err];
             if(err)
             {
-                DDLogVerbose(@"JSMinify:: error opening file: %@", err);
+                
                 return;
             }
             

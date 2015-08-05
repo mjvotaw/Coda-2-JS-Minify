@@ -9,9 +9,6 @@
 /* This object contains most of the methods for loading and modifying the database. */
 
 #import <Foundation/Foundation.h>
-#import "FMDatabase.h"
-#import "FMResultSet.h"
-#import "FMDatabaseQueue.h"
 #import "JSMBaseCodaPlugin.h"
 #import "JSMTaskMan.h"
 #import "JSFiles.h"
@@ -24,15 +21,7 @@
 
 @interface JSMDb : NSObject
 {
-    /* indexing tasks and pipes */
-    JSMTaskMan * tm;
-    
-    NSTask * indexTask;
-    NSPipe * indexPipe;
-    NSPipe * errorPipe;
-    NSMutableArray * dependencyQueue;
-    NSString * indexOutput;
-    NSString * dependsPath;
+
 }
 @property (strong) JSMBaseCodaPlugin <LessDbDelegate> * delegate;
 
@@ -40,35 +29,28 @@
 @property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-- (void)saveContext;
 
-@property (strong) FMDatabaseQueue * dbQueue;
-@property (strong) FMDatabaseQueue * dbLog;
 
 @property (strong) JSMPreferences * internalPreferences;
 @property (strong) NSMutableDictionary * prefs;
+
 @property (strong) NSMutableArray * currentParentFiles;
 @property (readwrite) int currentParentFilesCount;
-@property (readwrite) BOOL isDepenencying;
 
 +(JSMDb *)sharedLessDb;
 -(JSMDb *) initWithDelegate:(JSMBaseCodaPlugin <LessDbDelegate> *)d;
+
+// things to keep
+- (void)saveContext;
 -(void) setupDb;
--(void) setupLog;
-
--(void) updateParentFilesListWithCompletion:(void(^)(void))handler;
 -(void) updatePreferenceNamed:(NSString *)pref withValue:(id)val;
+
 -(void) registerFile:(NSURL *)url;
--(void) unregisterFile:(NSURL *)url;
 -(void) unregisterFileWithId:(NSManagedObjectID *)fileId;
--(NSDictionary *) getParentForFilepath:(NSString *)filepath;
-
--(void) setCssPath:(NSURL *)cssUrl forPath:(NSURL *)url;
--(void) updateLessFilePreferences:(NSDictionary *)options forPath:(NSURL *) url;
--(void) addDependencyCheckOnFile:(NSString *)path;
-
+-(JSFiles *)JSFileForFilePath:(NSString *)filePath;
 
 -(void) updateParentFilesList;
+-(void) updateParentFilesListWithCompletion:(void(^)(void))handler;
 -(void) updateMinifiedPath:(NSURL *)minifiedUrl forJSFile: (JSFiles *)jsFile;
 -(void) updateFileOptions:(NSDictionary *)options forFile:( JSFiles *)jsFile;
 @end
