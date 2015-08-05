@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C0C4FD2181F118600E35333 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4C0C4FCA181F118600E35333 /* README.txt */; };
+		4C1DFC1B182063330078B179 /* growl in Resources */ = {isa = PBXBuildFile; fileRef = 4C1DFC1A182063330078B179 /* growl */; };
+		4C321FD01827F98700FE7058 /* FileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C321FCF1827F98700FE7058 /* FileView.xib */; };
+		4C4CBBFD1B5E970C00BA1DCD /* uglify in Resources */ = {isa = PBXBuildFile; fileRef = 4C4CBBFC1B5E970C00BA1DCD /* uglify */; };
+		4C5CB3CC18244CFF00A4DD66 /* JSMkeyPrefButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5CB3CB18244CFF00A4DD66 /* JSMkeyPrefButton.m */; };
+		4C5CB3CE182456C400A4DD66 /* trash2-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C5CB3CD182456C400A4DD66 /* trash2-50.png */; };
+		4C60E399182009D3003752C5 /* node in Resources */ = {isa = PBXBuildFile; fileRef = 4C60E398182009D3003752C5 /* node */; };
+		4C61B8E41A697C2100456E41 /* log.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4C61B8E31A697C2100456E41 /* log.sqlite */; };
+		4C61B8E71A69C35500456E41 /* JSMTaskMan.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C61B8E61A69C35500456E41 /* JSMTaskMan.m */; };
+		4C6D96D619FD6D95004CAE9E /* JSMDb.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D96D519FD6D95004CAE9E /* JSMDb.m */; };
+		4C8B098D1905BEF4002D30DE /* JSMdropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B098C1905BEF4002D30DE /* JSMdropView.m */; };
+		4CA289EC19FE8E5C008D523C /* node_modules in Resources */ = {isa = PBXBuildFile; fileRef = 4CA289EB19FE8E5C008D523C /* node_modules */; };
+		4CA38ECF1B728F130004C79D /* JSMPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA38ECE1B728F130004C79D /* JSMPreferences.m */; };
+		4CA9B3A81A01425E00934524 /* JSMsiteSettingsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA9B3A61A01425E00934524 /* JSMsiteSettingsWindowController.m */; };
+		4CA9B3A91A01425E00934524 /* JSMsiteSettingsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA9B3A71A01425E00934524 /* JSMsiteSettingsWindowController.xib */; };
+		4CCDB1871846503900B0C66C /* JSMBaseCodaPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDB1861846503900B0C66C /* JSMBaseCodaPlugin.m */; };
+		4CCF170D19BF6463002E0650 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCF170A19BF6463002E0650 /* Growl.framework */; };
+		4CCF170E19BF6463002E0650 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCF170C19BF6463002E0650 /* Growl.framework */; };
+		4CE8A6F41B725AF300F519C7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A6F21B725AF300F519C7 /* Model.xcdatamodeld */; };
+		4CE8A6F61B725E4400F519C7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE8A6F51B725E4400F519C7 /* CoreData.framework */; };
+		4CE8A6F91B725F4B00F519C7 /* JSFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8A6F81B725F4B00F519C7 /* JSFiles.m */; };
+		4CE8C353191298C30023524E /* FileFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE8C352191298C30023524E /* FileFooter.xib */; };
+		4CE8C3551912993B0023524E /* folder_plus_icon&48.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE8C3541912993B0023524E /* folder_plus_icon&48.png */; };
+		4CE8C35819129FC10023524E /* JSMPreferenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE8C35719129FC10023524E /* JSMPreferenceView.m */; };
+		4CF0C0E11A03FEB80017047E /* JSMflippedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF0C0E01A03FEB80017047E /* JSMflippedView.m */; };
+		4CF8EF111A13F2D300162814 /* JSMpreferenceWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8EF0F1A13F2D300162814 /* JSMpreferenceWindowController.m */; };
+		4CF8EF121A13F2D300162814 /* JSMpreferenceWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8EF101A13F2D300162814 /* JSMpreferenceWindowController.xib */; };
+		4CFCBB8518217EDC0030FC08 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFCBB7B18217EDC0030FC08 /* FMDatabase.m */; };
+		4CFCBB8618217EDC0030FC08 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFCBB7D18217EDC0030FC08 /* FMDatabaseAdditions.m */; };
+		4CFCBB8718217EDC0030FC08 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFCBB7F18217EDC0030FC08 /* FMDatabasePool.m */; };
+		4CFCBB8818217EDC0030FC08 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFCBB8118217EDC0030FC08 /* FMDatabaseQueue.m */; };
+		4CFCBB8918217EDC0030FC08 /* fmdb.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFCBB8218217EDC0030FC08 /* fmdb.m */; };
+		4CFCBB8A18217EDC0030FC08 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFCBB8418217EDC0030FC08 /* FMResultSet.m */; };
+		4CFCBB8C182180620030FC08 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CFCBB8B182180620030FC08 /* libsqlite3.dylib */; };
+		4CFCBB9018218F2B0030FC08 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4CFCBB8F18218F2B0030FC08 /* db.sqlite */; };
+		4CFCBB971821B5230030FC08 /* folder_filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CFCBB961821B5230030FC08 /* folder_filled-50.png */; };
+		4CFCBB991821B6CA0030FC08 /* left-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CFCBB981821B6CA0030FC08 /* left-50.png */; };
+		4CFCBB9B1821B6D80030FC08 /* right-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CFCBB9A1821B6D80030FC08 /* right-50.png */; };
+		4CFCBB9E1821B82A0030FC08 /* FileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFCBB9D1821B82A0030FC08 /* FileView.m */; };
+		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		F163D8F50C67D694000A99F5 /* JSPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = F163D8F40C67D694000A99F5 /* JSPlugin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCF630370AF2F00C91783 /* JSMinify_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMinify_Prefix.pch; sourceTree = "<group>"; };
+		4C0C4FBB181F118600E35333 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		4C0C4FBC181F118600E35333 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		4C0C4FBD181F118600E35333 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		4C0C4FBE181F118600E35333 /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		4C0C4FBF181F118600E35333 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		4C0C4FC0181F118600E35333 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
+		4C0C4FC1181F118600E35333 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		4C0C4FC3181F118600E35333 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		4C0C4FC4181F118600E35333 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		4C0C4FC6181F118600E35333 /* ContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		4C0C4FC7181F118600E35333 /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		4C0C4FC8181F118600E35333 /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		4C0C4FC9181F118600E35333 /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		4C0C4FCA181F118600E35333 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		4C1DFC1A182063330078B179 /* growl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = growl; sourceTree = "<group>"; };
+		4C321FCF1827F98700FE7058 /* FileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FileView.xib; sourceTree = "<group>"; };
+		4C4CBBFC1B5E970C00BA1DCD /* uglify */ = {isa = PBXFileReference; lastKnownFileType = folder; path = uglify; sourceTree = "<group>"; };
+		4C5CB3CA18244CFF00A4DD66 /* JSMkeyPrefButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMkeyPrefButton.h; sourceTree = "<group>"; };
+		4C5CB3CB18244CFF00A4DD66 /* JSMkeyPrefButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMkeyPrefButton.m; sourceTree = "<group>"; };
+		4C5CB3CD182456C400A4DD66 /* trash2-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trash2-50.png"; sourceTree = "<group>"; };
+		4C605F3E1677C20600C8F7D9 /* CodaPlugInsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodaPlugInsController.h; sourceTree = "<group>"; };
+		4C60E398182009D3003752C5 /* node */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = node; sourceTree = "<group>"; };
+		4C61B8E31A697C2100456E41 /* log.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = log.sqlite; sourceTree = "<group>"; };
+		4C61B8E51A69C35500456E41 /* JSMTaskMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMTaskMan.h; sourceTree = "<group>"; };
+		4C61B8E61A69C35500456E41 /* JSMTaskMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMTaskMan.m; sourceTree = "<group>"; };
+		4C6D96D419FD6D95004CAE9E /* JSMDb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMDb.h; sourceTree = "<group>"; };
+		4C6D96D519FD6D95004CAE9E /* JSMDb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMDb.m; sourceTree = "<group>"; };
+		4C8B098B1905BEF4002D30DE /* JSMdropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMdropView.h; sourceTree = "<group>"; };
+		4C8B098C1905BEF4002D30DE /* JSMdropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMdropView.m; sourceTree = "<group>"; };
+		4C935B27199AC16800AD1D5A /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		4CA289EB19FE8E5C008D523C /* node_modules */ = {isa = PBXFileReference; lastKnownFileType = folder; path = node_modules; sourceTree = "<group>"; };
+		4CA38EC61B7282AA0004C79D /* Model 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 3.xcdatamodel"; sourceTree = "<group>"; };
+		4CA38ECD1B728F130004C79D /* JSMPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMPreferences.h; sourceTree = "<group>"; };
+		4CA38ECE1B728F130004C79D /* JSMPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMPreferences.m; sourceTree = "<group>"; };
+		4CA9B3A51A01425E00934524 /* JSMsiteSettingsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMsiteSettingsWindowController.h; sourceTree = "<group>"; };
+		4CA9B3A61A01425E00934524 /* JSMsiteSettingsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMsiteSettingsWindowController.m; sourceTree = "<group>"; };
+		4CA9B3A71A01425E00934524 /* JSMsiteSettingsWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSMsiteSettingsWindowController.xib; sourceTree = "<group>"; };
+		4CCDB1851846503900B0C66C /* JSMBaseCodaPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMBaseCodaPlugin.h; sourceTree = "<group>"; };
+		4CCDB1861846503900B0C66C /* JSMBaseCodaPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMBaseCodaPlugin.m; sourceTree = "<group>"; };
+		4CCF170A19BF6463002E0650 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
+		4CCF170C19BF6463002E0650 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
+		4CE8A6F31B725AF300F519C7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		4CE8A6F51B725E4400F519C7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		4CE8A6F71B725F4B00F519C7 /* JSFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFiles.h; sourceTree = "<group>"; };
+		4CE8A6F81B725F4B00F519C7 /* JSFiles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFiles.m; sourceTree = "<group>"; };
+		4CE8A6FE1B726BC500F519C7 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
+		4CE8C352191298C30023524E /* FileFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FileFooter.xib; sourceTree = "<group>"; };
+		4CE8C3541912993B0023524E /* folder_plus_icon&48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "folder_plus_icon&48.png"; sourceTree = "<group>"; };
+		4CE8C35619129FC10023524E /* JSMPreferenceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMPreferenceView.h; sourceTree = "<group>"; };
+		4CE8C35719129FC10023524E /* JSMPreferenceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMPreferenceView.m; sourceTree = "<group>"; };
+		4CF0C0DF1A03FEB80017047E /* JSMflippedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMflippedView.h; sourceTree = "<group>"; };
+		4CF0C0E01A03FEB80017047E /* JSMflippedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMflippedView.m; sourceTree = "<group>"; };
+		4CF8EF0E1A13F2D300162814 /* JSMpreferenceWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMpreferenceWindowController.h; sourceTree = "<group>"; };
+		4CF8EF0F1A13F2D300162814 /* JSMpreferenceWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMpreferenceWindowController.m; sourceTree = "<group>"; };
+		4CF8EF101A13F2D300162814 /* JSMpreferenceWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSMpreferenceWindowController.xib; sourceTree = "<group>"; };
+		4CFCBB7A18217EDC0030FC08 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		4CFCBB7B18217EDC0030FC08 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		4CFCBB7C18217EDC0030FC08 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		4CFCBB7D18217EDC0030FC08 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		4CFCBB7E18217EDC0030FC08 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		4CFCBB7F18217EDC0030FC08 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		4CFCBB8018217EDC0030FC08 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		4CFCBB8118217EDC0030FC08 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		4CFCBB8218217EDC0030FC08 /* fmdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fmdb.m; sourceTree = "<group>"; };
+		4CFCBB8318217EDC0030FC08 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		4CFCBB8418217EDC0030FC08 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		4CFCBB8B182180620030FC08 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		4CFCBB8F18218F2B0030FC08 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
+		4CFCBB961821B5230030FC08 /* folder_filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "folder_filled-50.png"; sourceTree = "<group>"; };
+		4CFCBB981821B6CA0030FC08 /* left-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-50.png"; sourceTree = "<group>"; };
+		4CFCBB9A1821B6D80030FC08 /* right-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-50.png"; sourceTree = "<group>"; };
+		4CFCBB9C1821B82A0030FC08 /* FileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileView.h; sourceTree = "<group>"; };
+		4CFCBB9D1821B82A0030FC08 /* FileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileView.m; sourceTree = "<group>"; };
+		8D5B49B6048680CD000E48DA /* JSMinify.codaplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSMinify.codaplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		F163D8F30C67D694000A99F5 /* JSPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPlugin.h; sourceTree = "<group>"; };
+		F163D8F40C67D694000A99F5 /* JSPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPlugin.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CE8A6F61B725E4400F519C7 /* CoreData.framework in Frameworks */,
+				4CFCBB8C182180620030FC08 /* libsqlite3.dylib in Frameworks */,
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+				4CCF170E19BF6463002E0650 /* Growl.framework in Frameworks */,
+				4CCF170D19BF6463002E0650 /* Growl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* Capitalize */ = {
+			isa = PBXGroup;
+			children = (
+				4CE8A6F51B725E4400F519C7 /* CoreData.framework */,
+				4C27CAAD19BF458700FA70A1 /* external */,
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = Capitalize;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C4CBBFC1B5E970C00BA1DCD /* uglify */,
+				4CFCBB951821B51C0030FC08 /* images */,
+				4CFCBB8F18218F2B0030FC08 /* db.sqlite */,
+				4C61B8E31A697C2100456E41 /* log.sqlite */,
+				4CA289EB19FE8E5C008D523C /* node_modules */,
+				4C1DFC1A182063330078B179 /* growl */,
+				4C60E398182009D3003752C5 /* node */,
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4CE8A6FA1B725F5000F519C7 /* core data */,
+				4CF8EF131A13F2DA00162814 /* preferenceWindow */,
+				4CA9B3A41A01421A00934524 /* siteSettingsWindow */,
+				4C5CB3C918244CD700A4DD66 /* views */,
+				4C605F3E1677C20600C8F7D9 /* CodaPlugInsController.h */,
+				F163D8F30C67D694000A99F5 /* JSPlugin.h */,
+				F163D8F40C67D694000A99F5 /* JSPlugin.m */,
+				4CCDB1851846503900B0C66C /* JSMBaseCodaPlugin.h */,
+				4CCDB1861846503900B0C66C /* JSMBaseCodaPlugin.m */,
+				4C6D96D419FD6D95004CAE9E /* JSMDb.h */,
+				4C6D96D519FD6D95004CAE9E /* JSMDb.m */,
+				4C61B8E51A69C35500456E41 /* JSMTaskMan.h */,
+				4C61B8E61A69C35500456E41 /* JSMTaskMan.m */,
+				4CE8A6F21B725AF300F519C7 /* Model.xcdatamodeld */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+				D2F7E65807B2D6F200F64583 /* CoreData.framework */,
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* JSMinify.codaplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF630370AF2F00C91783 /* JSMinify_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		4C0C4FBA181F118600E35333 /* Lumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				4C0C4FBB181F118600E35333 /* DDAbstractDatabaseLogger.h */,
+				4C0C4FBC181F118600E35333 /* DDAbstractDatabaseLogger.m */,
+				4C0C4FBD181F118600E35333 /* DDASLLogger.h */,
+				4C0C4FBE181F118600E35333 /* DDASLLogger.m */,
+				4C0C4FBF181F118600E35333 /* DDFileLogger.h */,
+				4C0C4FC0181F118600E35333 /* DDFileLogger.m */,
+				4C0C4FC1181F118600E35333 /* DDLog.h */,
+				4C935B27199AC16800AD1D5A /* DDLog.m */,
+				4C0C4FC3181F118600E35333 /* DDTTYLogger.h */,
+				4C0C4FC4181F118600E35333 /* DDTTYLogger.m */,
+				4C0C4FC5181F118600E35333 /* Extensions */,
+			);
+			path = Lumberjack;
+			sourceTree = "<group>";
+		};
+		4C0C4FC5181F118600E35333 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4C0C4FC6181F118600E35333 /* ContextFilterLogFormatter.h */,
+				4C0C4FC7181F118600E35333 /* ContextFilterLogFormatter.m */,
+				4C0C4FC8181F118600E35333 /* DispatchQueueLogFormatter.h */,
+				4C0C4FC9181F118600E35333 /* DispatchQueueLogFormatter.m */,
+				4C0C4FCA181F118600E35333 /* README.txt */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4C27CAAD19BF458700FA70A1 /* external */ = {
+			isa = PBXGroup;
+			children = (
+				4CCF170F19BF6469002E0650 /* Growl */,
+				4CFCBB8B182180620030FC08 /* libsqlite3.dylib */,
+				4C0C4FBA181F118600E35333 /* Lumberjack */,
+				4CFCBB7918217EDC0030FC08 /* fmdb */,
+			);
+			name = external;
+			sourceTree = "<group>";
+		};
+		4C5CB3C918244CD700A4DD66 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				4C321FCF1827F98700FE7058 /* FileView.xib */,
+				4CE8C352191298C30023524E /* FileFooter.xib */,
+				4CFCBB9C1821B82A0030FC08 /* FileView.h */,
+				4CFCBB9D1821B82A0030FC08 /* FileView.m */,
+				4C5CB3CA18244CFF00A4DD66 /* JSMkeyPrefButton.h */,
+				4C5CB3CB18244CFF00A4DD66 /* JSMkeyPrefButton.m */,
+				4C8B098B1905BEF4002D30DE /* JSMdropView.h */,
+				4C8B098C1905BEF4002D30DE /* JSMdropView.m */,
+				4CE8C35619129FC10023524E /* JSMPreferenceView.h */,
+				4CE8C35719129FC10023524E /* JSMPreferenceView.m */,
+				4CF0C0DF1A03FEB80017047E /* JSMflippedView.h */,
+				4CF0C0E01A03FEB80017047E /* JSMflippedView.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		4CA9B3A41A01421A00934524 /* siteSettingsWindow */ = {
+			isa = PBXGroup;
+			children = (
+				4CA9B3A51A01425E00934524 /* JSMsiteSettingsWindowController.h */,
+				4CA9B3A61A01425E00934524 /* JSMsiteSettingsWindowController.m */,
+				4CA9B3A71A01425E00934524 /* JSMsiteSettingsWindowController.xib */,
+			);
+			name = siteSettingsWindow;
+			sourceTree = "<group>";
+		};
+		4CCF170B19BF6463002E0650 /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				4CCF170C19BF6463002E0650 /* Growl.framework */,
+			);
+			path = Legacy;
+			sourceTree = "<group>";
+		};
+		4CCF170F19BF6469002E0650 /* Growl */ = {
+			isa = PBXGroup;
+			children = (
+				4CCF170A19BF6463002E0650 /* Growl.framework */,
+				4CCF170B19BF6463002E0650 /* Legacy */,
+			);
+			name = Growl;
+			sourceTree = "<group>";
+		};
+		4CE8A6FA1B725F5000F519C7 /* core data */ = {
+			isa = PBXGroup;
+			children = (
+				4CA38ECD1B728F130004C79D /* JSMPreferences.h */,
+				4CA38ECE1B728F130004C79D /* JSMPreferences.m */,
+				4CE8A6F71B725F4B00F519C7 /* JSFiles.h */,
+				4CE8A6F81B725F4B00F519C7 /* JSFiles.m */,
+			);
+			name = "core data";
+			sourceTree = "<group>";
+		};
+		4CF8EF131A13F2DA00162814 /* preferenceWindow */ = {
+			isa = PBXGroup;
+			children = (
+				4CF8EF0E1A13F2D300162814 /* JSMpreferenceWindowController.h */,
+				4CF8EF0F1A13F2D300162814 /* JSMpreferenceWindowController.m */,
+				4CF8EF101A13F2D300162814 /* JSMpreferenceWindowController.xib */,
+			);
+			name = preferenceWindow;
+			sourceTree = "<group>";
+		};
+		4CFCBB7918217EDC0030FC08 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				4CFCBB7A18217EDC0030FC08 /* FMDatabase.h */,
+				4CFCBB7B18217EDC0030FC08 /* FMDatabase.m */,
+				4CFCBB7C18217EDC0030FC08 /* FMDatabaseAdditions.h */,
+				4CFCBB7D18217EDC0030FC08 /* FMDatabaseAdditions.m */,
+				4CFCBB7E18217EDC0030FC08 /* FMDatabasePool.h */,
+				4CFCBB7F18217EDC0030FC08 /* FMDatabasePool.m */,
+				4CFCBB8018217EDC0030FC08 /* FMDatabaseQueue.h */,
+				4CFCBB8118217EDC0030FC08 /* FMDatabaseQueue.m */,
+				4CFCBB8218217EDC0030FC08 /* fmdb.m */,
+				4CFCBB8318217EDC0030FC08 /* FMResultSet.h */,
+				4CFCBB8418217EDC0030FC08 /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		4CFCBB951821B51C0030FC08 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				4CE8C3541912993B0023524E /* folder_plus_icon&48.png */,
+				4C5CB3CD182456C400A4DD66 /* trash2-50.png */,
+				4CFCBB9A1821B6D80030FC08 /* right-50.png */,
+				4CFCBB981821B6CA0030FC08 /* left-50.png */,
+				4CFCBB961821B5230030FC08 /* folder_filled-50.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* JSMinify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "JSMinify" */;
+			buildPhases = (
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JSMinify;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = Capitalize;
+			productReference = 8D5B49B6048680CD000E48DA /* JSMinify.codaplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "JSMinify" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* Capitalize */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* JSMinify */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C4CBBFD1B5E970C00BA1DCD /* uglify in Resources */,
+				4C61B8E41A697C2100456E41 /* log.sqlite in Resources */,
+				4CE8C353191298C30023524E /* FileFooter.xib in Resources */,
+				4C321FD01827F98700FE7058 /* FileView.xib in Resources */,
+				4C5CB3CE182456C400A4DD66 /* trash2-50.png in Resources */,
+				4C1DFC1B182063330078B179 /* growl in Resources */,
+				4CFCBB9018218F2B0030FC08 /* db.sqlite in Resources */,
+				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				4CF8EF121A13F2D300162814 /* JSMpreferenceWindowController.xib in Resources */,
+				4CFCBB9B1821B6D80030FC08 /* right-50.png in Resources */,
+				4CE8C3551912993B0023524E /* folder_plus_icon&48.png in Resources */,
+				4CA9B3A91A01425E00934524 /* JSMsiteSettingsWindowController.xib in Resources */,
+				4C0C4FD2181F118600E35333 /* README.txt in Resources */,
+				4CA289EC19FE8E5C008D523C /* node_modules in Resources */,
+				4CFCBB991821B6CA0030FC08 /* left-50.png in Resources */,
+				4C60E399182009D3003752C5 /* node in Resources */,
+				4CFCBB971821B5230030FC08 /* folder_filled-50.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CFCBB9E1821B82A0030FC08 /* FileView.m in Sources */,
+				4C8B098D1905BEF4002D30DE /* JSMdropView.m in Sources */,
+				4CF0C0E11A03FEB80017047E /* JSMflippedView.m in Sources */,
+				4C61B8E71A69C35500456E41 /* JSMTaskMan.m in Sources */,
+				4CFCBB8918217EDC0030FC08 /* fmdb.m in Sources */,
+				4CE8A6F41B725AF300F519C7 /* Model.xcdatamodeld in Sources */,
+				F163D8F50C67D694000A99F5 /* JSPlugin.m in Sources */,
+				4CA38ECF1B728F130004C79D /* JSMPreferences.m in Sources */,
+				4CE8C35819129FC10023524E /* JSMPreferenceView.m in Sources */,
+				4CFCBB8A18217EDC0030FC08 /* FMResultSet.m in Sources */,
+				4CFCBB8518217EDC0030FC08 /* FMDatabase.m in Sources */,
+				4CFCBB8818217EDC0030FC08 /* FMDatabaseQueue.m in Sources */,
+				4CFCBB8718217EDC0030FC08 /* FMDatabasePool.m in Sources */,
+				4CCDB1871846503900B0C66C /* JSMBaseCodaPlugin.m in Sources */,
+				4CF8EF111A13F2D300162814 /* JSMpreferenceWindowController.m in Sources */,
+				4C5CB3CC18244CFF00A4DD66 /* JSMkeyPrefButton.m in Sources */,
+				4CFCBB8618217EDC0030FC08 /* FMDatabaseAdditions.m in Sources */,
+				4CE8A6F91B725F4B00F519C7 /* JSFiles.m in Sources */,
+				4C6D96D619FD6D95004CAE9E /* JSMDb.m in Sources */,
+				4CA9B3A81A01425E00934524 /* JSMsiteSettingsWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB913B08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)/Library/Application Support/Coda 2/Plug-ins";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Legacy",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = JSMinify_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = /;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-Wl,-U",
+					"-Wl,_OBJC_CLASS_$_DDASLLogger",
+					"-Wl,-U",
+					"-Wl,_OBJC_CLASS_$_DDLog",
+				);
+				PRODUCT_NAME = JSMinify;
+				SDKROOT = macosx10.9;
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = codaplugin;
+			};
+			name = Debug;
+		};
+		1DEB913C08733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEPLOYMENT_LOCATION = NO;
+				DSTROOT = "$(HOME)/Library/Application Support/Coda 2/Plug-ins";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Legacy",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = JSMinify_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-Wl,-U",
+					"-Wl,_OBJC_CLASS_$_DDASLLogger",
+					"-Wl,-U",
+					"-Wl,_OBJC_CLASS_$_DDLog",
+				);
+				PRODUCT_NAME = JSMinify;
+				SDKROOT = macosx10.9;
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = codaplugin;
+			};
+			name = Release;
+		};
+		1DEB913F08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1DEB914008733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "JSMinify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913B08733D840010E9CD /* Debug */,
+				1DEB913C08733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "JSMinify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913F08733D840010E9CD /* Debug */,
+				1DEB914008733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4CE8A6F21B725AF300F519C7 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4CA38EC61B7282AA0004C79D /* Model 3.xcdatamodel */,
+				4CE8A6FE1B726BC500F519C7 /* Model 2.xcdatamodel */,
+				4CE8A6F31B725AF300F519C7 /* Model.xcdatamodel */,
+			);
+			currentVersion = 4CA38EC61B7282AA0004C79D /* Model 3.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

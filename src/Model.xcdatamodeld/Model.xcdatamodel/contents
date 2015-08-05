@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="JSFiles" representedClassName="JSFiles" syncable="YES">
+        <attribute name="minified_path" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="options" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="site_uuid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="JSFiles" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="JSFiles" positionX="-63" positionY="-18" width="128" height="120"/>
+    </elements>
+</model>

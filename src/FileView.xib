@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment version="1070" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView wantsLayer="YES" id="xi1-zP-psv" customClass="JSMFileView">
+            <rect key="frame" x="0.0" y="0.0" width="583" height="285"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jxs-h4-ezP">
+                    <rect key="frame" x="18" y="260" width="217" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="FileName.less" id="KcU-Tw-VEU">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaj-73-L6o">
+                    <rect key="frame" x="30" y="241" width="449" height="16"/>
+                    <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" title="/Volumes/Macintosh HD/Users/michael/Documents/xcode stuff/hM github/LESS Compiler/dep2.less" id="rt6-Zv-hDq">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zq1-E0-fpK">
+                    <rect key="frame" x="30" y="224" width="451" height="17"/>
+                    <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" title="/Volumes/Macintosh HD/Users/michael/Documents/xcode stuff/hM github/LESS Compiler/dep2.css" id="qrN-zP-sT9">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button toolTip="Change output directory" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="08F-PQ-sjk">
+                    <rect key="frame" x="481" y="217" width="37" height="32"/>
+                    <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSFolder" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sXj-9V-72D">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xHp-0u-E3W">
+                    <rect key="frame" x="9" y="226" width="21" height="16"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSGoLeftTemplate" id="hNI-bG-ERy"/>
+                </imageView>
+                <button toolTip="Remove this entry" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zJx-yb-FD0">
+                    <rect key="frame" x="532" y="251" width="37" height="32"/>
+                    <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSTrashEmpty" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8Lg-ZK-7e0">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <button toolTip="Advanced settings" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GvW-ck-VCR">
+                    <rect key="frame" x="532" y="217" width="37" height="32"/>
+                    <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSAdvanced" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qA6-0f-xlt">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <customView autoresizesSubviews="NO" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YU8-Zs-Jn5" userLabel="Advanced Settings">
+                    <rect key="frame" x="0.0" y="-100" width="583" height="315"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zmX-AH-G6D">
+                            <rect key="frame" x="18" y="291" width="142" height="19"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Advanced Settings" id="fxV-WY-4ut">
+                                <font key="font" metaFont="system" size="15"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <button toolTip="Do not mangle/drop function names.  Useful for code relying on Function.prototype.name." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t1b-Zd-0gN" customClass="JSMkeyPrefButton">
+                            <rect key="frame" x="18" y="173" width="156" height="18"/>
+                            <buttonCell key="cell" type="check" title="Keep function names" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ppW-Qm-jYK">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="prefKey" value="--keep-fnames"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x7p-KK-bOk" customClass="JSMkeyPrefButton">
+                            <rect key="frame" x="18" y="261" width="144" height="18"/>
+                            <string key="toolTip">Pass this flag if you don't care about full compliance with Internet Explorer 6-8 quirks (by default UglifyJS will try to be IE-proof).</string>
+                            <buttonCell key="cell" type="check" title="Screw IE 8" bezelStyle="regularSquare" imagePosition="left" inset="2" id="WGK-Nf-XEf">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="prefKey" value="--screw-ie8"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g1e-rD-j4F" customClass="JSMkeyPrefButton">
+                            <rect key="frame" x="18" y="217" width="145" height="18"/>
+                            <buttonCell key="cell" type="check" title="Preserve comments" bezelStyle="regularSquare" imagePosition="left" inset="2" id="cct-xq-bAF">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="prefKey" value="--comments all"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button toolTip="Allow return outside of functions.  Useful when minifying CommonJS modules." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zfh-V3-7uC" customClass="JSMkeyPrefButton">
+                            <rect key="frame" x="18" y="195" width="229" height="18"/>
+                            <buttonCell key="cell" type="check" title="Allow returns outside of functions" bezelStyle="regularSquare" imagePosition="left" inset="2" id="QmR-eH-d62">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="prefKey" value="--bare-returns"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button toolTip="Parse a single expression, rather than a program (for parsing JSON)" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mv5-GI-IQT" customClass="JSMkeyPrefButton">
+                            <rect key="frame" x="18" y="239" width="168" height="18"/>
+                            <buttonCell key="cell" type="check" title="Parse single expression" bezelStyle="regularSquare" imagePosition="left" inset="2" id="mFl-AF-bc1">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="prefKey" value="--expr"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V8v-sO-GVk">
+                            <rect key="frame" x="209" y="122" width="356" height="45"/>
+                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="(check out https://github.com/mishoo/UglifyJS2 for more info on these options)" id="7Xg-B2-1hF">
+                                <font key="font" metaFont="system" size="10"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                </customView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ocz-F4-RIB">
+                    <rect key="frame" x="11" y="241" width="21" height="16"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSGoRightTemplate" id="XXZ-y5-drG"/>
+                </imageView>
+                <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Br5-r8-gA6">
+                    <rect key="frame" x="16" y="282" width="552" height="5"/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+            </subviews>
+            <connections>
+                <outlet property="advancedButton" destination="GvW-ck-VCR" id="zVG-MY-IQ3"/>
+                <outlet property="advancedSettingsView" destination="YU8-Zs-Jn5" id="ezz-Ev-KlO"/>
+                <outlet property="changeCssPathButton" destination="08F-PQ-sjk" id="Hak-Ru-Lm0"/>
+                <outlet property="cssPath" destination="Zq1-E0-fpK" id="VFd-lV-9xD"/>
+                <outlet property="deleteButton" destination="zJx-yb-FD0" id="Ulw-6g-HlG"/>
+                <outlet property="disableJavascript" destination="Mv5-GI-IQT" id="52E-3V-WrX"/>
+                <outlet property="fileName" destination="Jxs-h4-ezP" id="FJ6-Au-W7w"/>
+                <outlet property="horizontalLine" destination="Br5-r8-gA6" id="IMF-Td-a98"/>
+                <outlet property="insecureImports" destination="zfh-V3-7uC" id="UZp-vQ-ztp"/>
+                <outlet property="lessPath" destination="yaj-73-L6o" id="4MO-ii-40Y"/>
+                <outlet property="noIE" destination="x7p-KK-bOk" id="2LJ-Yp-bRU"/>
+                <outlet property="sourceMap" destination="t1b-Zd-0gN" id="2Rp-We-TsV"/>
+                <outlet property="strictImports" destination="g1e-rD-j4F" id="VG5-ZU-t7J"/>
+            </connections>
+            <point key="canvasLocation" x="248.5" y="114.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSAdvanced" width="32" height="32"/>
+        <image name="NSFolder" width="32" height="32"/>
+        <image name="NSGoLeftTemplate" width="9" height="12"/>
+        <image name="NSGoRightTemplate" width="9" height="12"/>
+        <image name="NSTrashEmpty" width="32" height="32"/>
+    </resources>
+</document>
