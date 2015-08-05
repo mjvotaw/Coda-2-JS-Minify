@@ -11,7 +11,7 @@
 #import "FileView.h"
 #import "JSMkeyPrefButton.h"
 
-static NSString * COMPVERSION = @"1.1.2";
+static NSString * COMPVERSION = @"0.1";
 static NSString * LESSVERSION = @"2.4.23";
 @interface JSMpreferenceWindowController ()
 
