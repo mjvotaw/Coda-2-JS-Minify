@@ -19,8 +19,8 @@ This plugin provides javascript parsing/minification straight in Coda.
 
 How do you use it?
 ------------------
-Once you install the plugin, you can add .js files to be watched by going to Plug-Ins > LESS Compiler > Site Settings.
-You can drag and drop the desired .js file, or hit the folder icon and select it. LESS Compiler will add it, and watch it for changes.
+Once you install the plugin, you can add .js files to be watched by going to Plug-Ins > JS Minify > Site Settings.
+You can drag and drop the desired .js file, or hit the folder icon and select it. JSMinify will add it, and watch it for changes.
 
 ![File Settings](/stuff/JS file settings.png)
 
@@ -29,7 +29,7 @@ Clicking the cog will show the Advanced settings for the given file:
 ![Advanced Settings](/stuff/JS file settings advanced.png)
 [Check out the Usage section of UglifyJS2 to learn more about what these options do.](https://github.com/mishoo/UglifyJS2#usage)
 
-The preferences menu provides various options for how LESS Compiler notifies you.
+The preferences menu provides various options for how JSMinify notifies you.
 ![Preferences](/stuff/JS preferences.png)
 
 Limitations
