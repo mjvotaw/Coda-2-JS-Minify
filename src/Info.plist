@@ -30,6 +30,8 @@
 	<string>6</string>
 	<key>CodaPlugInSupportedAPIVersion</key>
 	<integer>6</integer>
+	<key>CompilerVersion</key>
+	<string>2.4.23</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.7.0</string>
 	<key>NSPrincipalClass</key>

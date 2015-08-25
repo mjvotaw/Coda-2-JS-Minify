@@ -1,6 +1,5 @@
 //
 //  siteSettingsWindowController.h
-//  LESSCompile
 //
 //  Created by Michael on 10/29/14.
 //

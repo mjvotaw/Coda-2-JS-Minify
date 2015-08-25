@@ -14,7 +14,7 @@
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jxs-h4-ezP">
                     <rect key="frame" x="18" y="260" width="217" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="FileName.less" id="KcU-Tw-VEU">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="FileName.js" id="KcU-Tw-VEU">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -22,7 +22,7 @@
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaj-73-L6o">
                     <rect key="frame" x="30" y="241" width="449" height="16"/>
-                    <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" title="/Volumes/Macintosh HD/Users/michael/Documents/xcode stuff/hM github/LESS Compiler/dep2.less" id="rt6-Zv-hDq">
+                    <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" title="/Volumes/Macintosh HD/Users/michael/Documents/xcode stuff/hM github/JS Minify/test.js" id="rt6-Zv-hDq">
                         <font key="font" metaFont="miniSystem"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -30,7 +30,7 @@
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zq1-E0-fpK">
                     <rect key="frame" x="30" y="224" width="451" height="17"/>
-                    <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" title="/Volumes/Macintosh HD/Users/michael/Documents/xcode stuff/hM github/LESS Compiler/dep2.css" id="qrN-zP-sT9">
+                    <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" title="/Volumes/Macintosh HD/Users/michael/Documents/xcode stuff/hM github/JS Minify/test.min.js" id="qrN-zP-sT9">
                         <font key="font" metaFont="miniSystem"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -93,7 +93,7 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="prefKey" value="--screw-ie8"/>
                             </userDefinedRuntimeAttributes>
                         </button>
-                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g1e-rD-j4F" customClass="JSMkeyPrefButton">
+                        <button toolTip="Preserve all comments." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g1e-rD-j4F" customClass="JSMkeyPrefButton">
                             <rect key="frame" x="18" y="217" width="145" height="18"/>
                             <buttonCell key="cell" type="check" title="Preserve comments" bezelStyle="regularSquare" imagePosition="left" inset="2" id="cct-xq-bAF">
                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -131,7 +131,7 @@
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>
-                        <button toolTip="Mangle names" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uu0-nB-Uet" customClass="JSMkeyPrefButton">
+                        <button toolTip="Shorten variable and function names." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uu0-nB-Uet" customClass="JSMkeyPrefButton">
                             <rect key="frame" x="283" y="261" width="215" height="18"/>
                             <buttonCell key="cell" type="check" title="Mangle names" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Di8-H9-Sdf">
                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -151,7 +151,7 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="prefKey" value="--compress dead_code"/>
                             </userDefinedRuntimeAttributes>
                         </button>
-                        <button toolTip="Remove unreachable code" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DnC-zH-qer" customClass="JSMkeyPrefButton">
+                        <button toolTip="Join consecutive var statements into a comma-separated list." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DnC-zH-qer" customClass="JSMkeyPrefButton">
                             <rect key="frame" x="283" y="217" width="221" height="18"/>
                             <buttonCell key="cell" type="check" title="Join consecutive var statements" bezelStyle="regularSquare" imagePosition="left" inset="2" id="3fL-1X-kSW">
                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -218,13 +218,13 @@
                 <outlet property="advancedButton" destination="GvW-ck-VCR" id="zVG-MY-IQ3"/>
                 <outlet property="advancedSettingsView" destination="YU8-Zs-Jn5" id="ezz-Ev-KlO"/>
                 <outlet property="changeCssPathButton" destination="08F-PQ-sjk" id="Hak-Ru-Lm0"/>
-                <outlet property="cssPath" destination="Zq1-E0-fpK" id="VFd-lV-9xD"/>
                 <outlet property="deleteButton" destination="zJx-yb-FD0" id="Ulw-6g-HlG"/>
                 <outlet property="disableJavascript" destination="Mv5-GI-IQT" id="52E-3V-WrX"/>
                 <outlet property="fileName" destination="Jxs-h4-ezP" id="FJ6-Au-W7w"/>
                 <outlet property="horizontalLine" destination="Br5-r8-gA6" id="IMF-Td-a98"/>
                 <outlet property="insecureImports" destination="zfh-V3-7uC" id="UZp-vQ-ztp"/>
-                <outlet property="lessPath" destination="yaj-73-L6o" id="4MO-ii-40Y"/>
+                <outlet property="jsPath" destination="yaj-73-L6o" id="zWZ-11-cIb"/>
+                <outlet property="minifiedPath" destination="Zq1-E0-fpK" id="8YO-dS-zRY"/>
                 <outlet property="noIE" destination="x7p-KK-bOk" id="2LJ-Yp-bRU"/>
                 <outlet property="sourceMap" destination="t1b-Zd-0gN" id="2Rp-We-TsV"/>
                 <outlet property="strictImports" destination="g1e-rD-j4F" id="VG5-ZU-t7J"/>

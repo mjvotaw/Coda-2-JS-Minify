@@ -1,6 +1,5 @@
 //
 //  keyPrefButton.h
-//  LESSCompile
 //
 //  Created by Michael on 11/1/13.
 //

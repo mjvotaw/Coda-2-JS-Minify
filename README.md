@@ -14,7 +14,7 @@ Installation
 
 What does this do?
 ------------------
-This plugin provides javascript parsing/minification straight in Coda.
+This plugin provides javascript parsing/minification straight in Coda. 
 
 
 How do you use it?
@@ -27,6 +27,7 @@ You can drag and drop the desired .js file, or hit the folder icon and select it
 Clicking the cog will show the Advanced settings for the given file:
 
 ![Advanced Settings](/stuff/JS file settings advanced.png)
+[Check out the Usage section of UglifyJS2 to learn more about what these options do.](https://github.com/mishoo/UglifyJS2#usage)
 
 The preferences menu provides various options for how LESS Compiler notifies you.
 ![Preferences](/stuff/JS preferences.png)
@@ -42,6 +43,10 @@ If you have any ideas for how this plugin can work better, or any feature reques
 
 Change Log
 ==========
+
+1.0
+---
+- Initial release.
 
 0.1
 ---

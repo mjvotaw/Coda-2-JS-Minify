@@ -1,6 +1,6 @@
 //
 //  FileView.h
-//  LESSCompile
+//  JSMinify
 //
 //  Created by Michael on 10/30/13.
 //
@@ -11,8 +11,8 @@
 
 @interface JSMFileView : NSView
 @property (strong) IBOutlet NSTextField *fileName;
-@property (strong) IBOutlet NSTextField *lessPath;
-@property (strong) IBOutlet NSTextField *cssPath;
+@property (strong) IBOutlet NSTextField *jsPath;
+@property (strong) IBOutlet NSTextField *minifiedPath;
 @property (strong) IBOutlet NSButton *changeCssPathButton;
 @property (strong) IBOutlet NSButton *deleteButton;
 @property (strong) IBOutlet NSButton *advancedButton;

@@ -1,6 +1,5 @@
 //
 //  TaskMan.m
-//  LESSCompile
 //
 //  Created by Michael Votaw on 1/16/15.
 //

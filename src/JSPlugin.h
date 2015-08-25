@@ -10,7 +10,7 @@
 
 #import "JSMTaskMan.h"
 
-@interface JSPlugin : JSMBaseCodaPlugin <CodaPlugIn, NSUserNotificationCenterDelegate, NSWindowDelegate, LessDbDelegate>
+@interface JSPlugin : JSMBaseCodaPlugin <CodaPlugIn, NSUserNotificationCenterDelegate, NSWindowDelegate, JSDbDelegate>
 {
     
     JSMTaskMan * task;
@@ -24,14 +24,5 @@
 	BOOL isCompiling;
 	int compileCount;
 }
-
-#pragma mark - preferences Window
-
-//@property (strong) IBOutlet NSView *preferenceWindow;
-//@property (strong) IBOutlet NSTextField *versionField;
-//@property (strong) IBOutlet NSTextField *LESSVersionField;
-
-//- (IBAction)userChangedPreference:(NSButton *)sender;
-//- (IBAction)viewGithub:(id)sender;
 
 @end

@@ -1,6 +1,5 @@
 //
 //  preferenceWindowController.h
-//  LESSCompile
 //
 //  Created by Michael on 11/12/14.
 //
@@ -16,6 +15,6 @@
 - (IBAction)viewGithub:(id)sender;
 @property (strong) IBOutlet NSView *view;
 @property (strong) IBOutlet NSTextField *compilerVersion;
-@property (strong) IBOutlet NSTextField *lessVersion;
+@property (strong) IBOutlet NSTextField *pluginVersion;
 
 @end

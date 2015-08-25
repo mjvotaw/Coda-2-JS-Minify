@@ -1,7 +1,4 @@
 //
-//  LessDb.h
-//  LESSCompile
-//
 //  Created by Michael on 10/26/14.
 //
 //
@@ -14,7 +11,7 @@
 #import "JSFiles.h"
 #import "JSMPreferences.h"
 
-@protocol LessDbDelegate <NSObject>
+@protocol JSDbDelegate <NSObject>
 
 
 @end
@@ -23,7 +20,7 @@
 {
 
 }
-@property (strong) JSMBaseCodaPlugin <LessDbDelegate> * delegate;
+@property (strong) JSMBaseCodaPlugin <JSDbDelegate> * delegate;
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
@@ -37,8 +34,8 @@
 @property (strong) NSMutableArray * currentParentFiles;
 @property (readwrite) int currentParentFilesCount;
 
-+(JSMDb *)sharedLessDb;
--(JSMDb *) initWithDelegate:(JSMBaseCodaPlugin <LessDbDelegate> *)d;
++(JSMDb *)SharedJSDb;
+-(JSMDb *) initWithDelegate:(JSMBaseCodaPlugin <JSDbDelegate> *)d;
 
 // things to keep
 - (void)saveContext;

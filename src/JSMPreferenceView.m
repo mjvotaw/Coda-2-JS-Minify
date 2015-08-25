@@ -1,6 +1,5 @@
 //
 //  PreferenceView.m
-//  LESSCompile
 //
 //  Created by Michael on 5/1/14.
 //

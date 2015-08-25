@@ -1,6 +1,5 @@
 //
 //  preferenceWindowController.m
-//  LESSCompile
 //
 //  Created by Michael on 11/12/14.
 //
@@ -11,8 +10,6 @@
 #import "FileView.h"
 #import "JSMkeyPrefButton.h"
 
-static NSString * COMPVERSION = @"0.1";
-static NSString * LESSVERSION = @"2.4.23";
 @interface JSMpreferenceWindowController ()
 
 @end
@@ -23,7 +20,7 @@ static NSString * LESSVERSION = @"2.4.23";
 {
     if(self = [super initWithWindowNibName:@"JSMpreferenceWindowController"])
     {
-        Ldb = [JSMDb sharedLessDb];
+        Ldb = [JSMDb SharedJSDb];
         
     }
     return self;
@@ -54,8 +51,8 @@ static NSString * LESSVERSION = @"2.4.23";
         }
     }
     
-    [self.lessVersion setStringValue:LESSVERSION];
-    [self.compilerVersion setStringValue:COMPVERSION];
+    [self.pluginVersion setStringValue:[Ldb.delegate.bundle objectForInfoDictionaryKey:@"CFBundleVersion"] ];
+    [self.compilerVersion setStringValue:[Ldb.delegate.bundle objectForInfoDictionaryKey:@"CompilerVersion"] ];
     
 }
 

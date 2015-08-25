@@ -83,7 +83,6 @@
         if([[url pathExtension] isEqualToString:@"js"])
         {
             [self performSelector:@selector(handleJSFile:) withObject:[self getResolvedPathForPath:path] afterDelay:0.01];
-//            [self performSelectorOnMainThread:@selector(handleLessFile:) withObject:textView waitUntilDone:true];
         }
     }
 }
@@ -132,7 +131,7 @@
 }
 
 
-#pragma mark - LESS methods
+#pragma mark - JS methods
 
 -(void) handleJSFile:(NSString *)path
 {
@@ -196,7 +195,7 @@
     int resultCode = [self compileFile:parentPath toFile:cssPath withOptions:options];
 }
 
--(int) compileFile:(NSString *)lessFile toFile:(NSString *)cssFile withOptions:(NSArray *)options
+-(int) compileFile:(NSString *)jsFile toFile:(NSString *)minifiedFile withOptions:(NSArray *)options
 {
     if(isCompiling || (task!= nil && [task isRunning]))
     {
@@ -208,10 +207,10 @@
     
     
     NSString * launchPath = [NSString stringWithFormat:@"%@/node", [self.pluginBundle resourcePath]];
-    NSString * lessc = [NSString stringWithFormat:@"%@/uglify/bin/uglifyjs", [self.pluginBundle resourcePath]];
+    NSString * uglifyjs = [NSString stringWithFormat:@"%@/uglify/bin/uglifyjs", [self.pluginBundle resourcePath]];
     NSMutableArray * arguments = [NSMutableArray array];
-    [arguments addObject:lessc];
-    [arguments addObject:lessFile];
+    [arguments addObject:uglifyjs];
+    [arguments addObject:jsFile];
     
     if(options)
     {
@@ -224,7 +223,7 @@
     
 
     [arguments addObject:@"--output"];
-    [arguments addObject:cssFile];
+    [arguments addObject:minifiedFile];
     
     
     [self logMessage:[NSString stringWithFormat:@"Compiling with arguments: %@", arguments] ];
@@ -258,7 +257,6 @@
     NSError * error = nil;
     NSDictionary * output = nil;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"Parse error at (.*?):(\\d*),(\\d*)\\n(.*?)\\nError" options:nil error:&error];
-//    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(.*?)Error:(.*?) in (.*?less) on line (.*?), column (.*?):" options:nil error:&error];
     
     NSArray * errorList = [regex matchesInString:fullError options:nil range:NSMakeRange(0, [fullError length])];
     for(NSTextCheckingResult * ntcr in errorList)
@@ -282,21 +280,6 @@
     }
     return output;
 }
-
--(NSString *) getFileNameFromError:(NSString *)fullError
-{
-    NSError * error = nil;
-    NSString * output = [NSString stringWithFormat:@""];
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"ParseError:(.*?) in (.*?less) (.*):" options:nil error:&error];
-    
-    NSArray * errorList = [regex matchesInString:fullError options:nil range:NSMakeRange(0, [fullError length])];
-    for(NSTextCheckingResult * ntcr in errorList)
-    {
-        output = [fullError substringWithRange:[ntcr rangeAtIndex:2]];
-    }
-    return output;
-}
-
 
 
 -(void) displaySuccess

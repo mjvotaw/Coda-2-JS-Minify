@@ -1,6 +1,6 @@
 //
 //  FileView.m
-//  LESSCompile
+//  JSMinify
 //
 //  Created by Michael on 10/30/13.
 //

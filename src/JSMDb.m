@@ -1,6 +1,6 @@
 //
-//  LessDb.m
-//  LESSCompile
+//  JSMDb.h
+//  JSMinify
 //
 //  Created by Michael on 10/26/14.
 //
@@ -12,7 +12,7 @@ static JSMDb * sharedDb;
 
 @implementation JSMDb
 
--(JSMDb *)initWithDelegate:(JSMBaseCodaPlugin<LessDbDelegate> *)d
+-(JSMDb *)initWithDelegate:(JSMBaseCodaPlugin<JSDbDelegate> *)d
 {
     if(self = [super init])
     {
@@ -22,7 +22,7 @@ static JSMDb * sharedDb;
     return self;
 }
 
-+(JSMDb *)sharedLessDb
++(JSMDb *)SharedJSDb
 {
     if(sharedDb == nil)
     {
@@ -121,7 +121,7 @@ static JSMDb * sharedDb;
 
 #pragma mark - file registration
 
-// For a given url, determine if it is a file we should register (is it even a .less file? Is it a dependency of an existing registered file?).
+// For a given url, determine if it is a file we should register (is it even a .js file? Is it a dependency of an existing registered file?).
 // If so, save it to the database, and check if it has any dependencies that need to be tracked as well.
 
 -(void) registerFile:(NSURL *)url
@@ -210,7 +210,7 @@ static JSMDb * sharedDb;
     }
 }
 
-// If the user chooses to update the css path of a less file to somewhere else.
+// If the user chooses to update the css path of a js file to somewhere else.
 
 -(void) updateMinifiedPath:(NSURL *)minifiedUrl forJSFile: (JSFiles *)jsFile
 {
@@ -219,7 +219,7 @@ static JSMDb * sharedDb;
     [[self managedObjectContext] save:nil];
 }
 
-// Update preferences specific to each less file.
+// Update preferences specific to each js file.
 
 -(void) updateFileOptions:(NSDictionary *)options forFile:( JSFiles *)jsFile
 {

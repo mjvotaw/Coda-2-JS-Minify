@@ -1,6 +1,5 @@
 //
 //  siteSettingsWindowController.m
-//  LESSCompile
 //
 //  Created by Michael on 10/29/14.
 //
@@ -20,7 +19,7 @@
 {
     if(self = [super initWithWindowNibName:@"JSMsiteSettingsWindowController"])
     {
-        Ldb = [JSMDb sharedLessDb];
+        Ldb = [JSMDb SharedJSDb];
         
     }
     return self;
@@ -172,11 +171,11 @@
         //setup actions and target for all the checkboxes
         [f setupOptionsWithSelector:@selector(userUpdatedFilePreference:) andTarget:self];
         
-        // set the less and css paths
+        // set the js and min paths
         NSURL * url = [NSURL fileURLWithPath:currentFile.path isDirectory:NO];
         [f.fileName setStringValue:[url lastPathComponent]];
-        [f.lessPath setStringValue:currentFile.path];
-        [f.cssPath setStringValue:currentFile.minified_path];
+        [f.jsPath setStringValue:currentFile.path];
+        [f.minifiedPath setStringValue:currentFile.minified_path];
         
         
         //setup the rest of the non-preference button actions
