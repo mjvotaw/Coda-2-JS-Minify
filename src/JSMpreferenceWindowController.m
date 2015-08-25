@@ -76,20 +76,18 @@ static NSString * LESSVERSION = @"2.4.23";
     {
         if([sender state] == NSOffState)
         {
-            
-            
+            Ldb.delegate.verboseLogging = false;
         }
         else if([sender state] == NSOnState)
         {
-            
-            
+            Ldb.delegate.verboseLogging = true;
         }
     }
 }
 
 - (IBAction)viewGithub:(id)sender
 {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/mjvotaw/Coda-2-LESS-Compiler"]];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/mjvotaw/Coda-2-JS-Minify"]];
     
 }
 

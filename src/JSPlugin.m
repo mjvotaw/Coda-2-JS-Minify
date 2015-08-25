@@ -29,8 +29,14 @@
     if ( (self = [super initWithController:inController andPlugInBundle:p]) != nil )
 	{
         [self registerActions];
+        
+        
         Ldb = [[JSMDb alloc] initWithDelegate:self];
         [Ldb setupDb];
+        if([[Ldb.prefs objectForKey:@"verboseLog"] intValue] == 1)
+        {
+            self.verboseLogging = true;
+        }
     }
 	return self;
 }
@@ -154,6 +160,8 @@
     
     //Set compilation options
     NSMutableArray * options  = [NSMutableArray array];
+    NSMutableArray * compressOptions = [NSMutableArray array];
+    
     NSData * optionsData = [parent.options dataUsingEncoding:NSUTF8StringEncoding];
     
     if(optionsData != nil && ![optionsData isEqual:[NSNull null]])
@@ -165,10 +173,23 @@
             {
                 if([[parentFileOptions objectForKey:optionName] intValue] == 1)
                 {
-                    [options addObject:optionName];
+                    if([optionName rangeOfString:@"--compress"].location != NSNotFound)
+                    {
+                        NSArray * compressOption = [optionName componentsSeparatedByString:@" "];
+                        [compressOptions addObject:compressOption[1]];
+                    }
+                    else
+                    {
+                        [options addObject:optionName];
+                    }
                 }
             }
         }
+    }
+    
+    if(compressOptions.count > 0)
+    {
+        [options addObject:[NSString stringWithFormat:@"--compress %@",  [compressOptions componentsJoinedByString:@","] ]];
     }
     
     
@@ -186,7 +207,6 @@
     compileCount++;
     
     
-
     NSString * launchPath = [NSString stringWithFormat:@"%@/node", [self.pluginBundle resourcePath]];
     NSString * lessc = [NSString stringWithFormat:@"%@/uglify/bin/uglifyjs", [self.pluginBundle resourcePath]];
     NSMutableArray * arguments = [NSMutableArray array];
@@ -207,7 +227,7 @@
     [arguments addObject:cssFile];
     
     
-    
+    [self logMessage:[NSString stringWithFormat:@"Compiling with arguments: %@", arguments] ];
     
     task = [[JSMTaskMan alloc] initWithLaunchPath:launchPath AndArguments:arguments];
     [task launch];

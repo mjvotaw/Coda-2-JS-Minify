@@ -1,17 +1,19 @@
 #import <Cocoa/Cocoa.h>
 #import "CodaPluginsController.h"
 #import "Growl.framework/Headers/Growl.h"
-
+#import <asl.h>
 @class CodaPlugInsController;
 
 @interface JSMBaseCodaPlugin : NSObject <CodaPlugIn, NSUserNotificationCenterDelegate>
 {
     NSString * currentSiteUUID;
+    aslmsg msg;
+    aslclient logClient;
 }
 @property (strong) 	CodaPlugInsController* controller;
 @property (strong) NSObject <CodaPlugInBundle> * pluginBundle;
 @property (strong) NSBundle * bundle;
-
+@property (readwrite) BOOL verboseLogging;
 - (id)initWithController:(CodaPlugInsController*)inController;
 - (id)initWithController:(CodaPlugInsController*)inController andPlugInBundle:(NSObject <CodaPlugInBundle> *)p;
 #pragma mark - open/save file dialogs
@@ -32,6 +34,9 @@
 #pragma mark - OS X Compatability methods
 -(id) getNibNamed:(NSString *)nibName forClass:(Class)nibClass;
 -(NSArray *) loadNibNamed:(NSString *)nibName;
+#pragma mark - system logging
+-(void) logMessage:(NSString *)message;
+-(void) logError:(NSString *)errorMessage;
 #pragma mark - other helpers
 -(BOOL) isSiteOpen;
 -(NSString *) getCurrentSiteUUID;

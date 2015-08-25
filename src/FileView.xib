@@ -124,13 +124,83 @@
                             </userDefinedRuntimeAttributes>
                         </button>
                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V8v-sO-GVk">
-                            <rect key="frame" x="209" y="122" width="356" height="45"/>
+                            <rect key="frame" x="209" y="112" width="356" height="26"/>
                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="(check out https://github.com/mishoo/UglifyJS2 for more info on these options)" id="7Xg-B2-1hF">
                                 <font key="font" metaFont="system" size="10"/>
                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>
+                        <button toolTip="Mangle names" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uu0-nB-Uet" customClass="JSMkeyPrefButton">
+                            <rect key="frame" x="283" y="261" width="215" height="18"/>
+                            <buttonCell key="cell" type="check" title="Mangle names" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Di8-H9-Sdf">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="prefKey" value="--mangle"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button toolTip="Remove unreachable code" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lnL-XV-uzA" customClass="JSMkeyPrefButton">
+                            <rect key="frame" x="283" y="239" width="215" height="18"/>
+                            <buttonCell key="cell" type="check" title="Remove dead code" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ej2-yW-GEA">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="prefKey" value="--compress dead_code"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button toolTip="Remove unreachable code" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DnC-zH-qer" customClass="JSMkeyPrefButton">
+                            <rect key="frame" x="283" y="217" width="221" height="18"/>
+                            <buttonCell key="cell" type="check" title="Join consecutive var statements" bezelStyle="regularSquare" imagePosition="left" inset="2" id="3fL-1X-kSW">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="prefKey" value="--compress join_vars"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button toolTip="Discard calls to console.* functions." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dFT-uZ-mMf" customClass="JSMkeyPrefButton">
+                            <rect key="frame" x="283" y="195" width="177" height="18"/>
+                            <buttonCell key="cell" type="check" title="Drop console statements" bezelStyle="regularSquare" imagePosition="left" inset="2" id="XKh-Tt-XHY">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="prefKey" value="--compress drop_console"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button toolTip="Prevent the compressor from discarding unused function arguments. You need this for code which relies on Function.length." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y2l-ic-USS" customClass="JSMkeyPrefButton">
+                            <rect key="frame" x="18" y="153" width="177" height="18"/>
+                            <buttonCell key="cell" type="check" title="Keep function arguments" bezelStyle="regularSquare" imagePosition="left" inset="2" id="yAG-ZV-dKp">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="prefKey" value="--compress keep_fargs"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button toolTip="Enables some transformations that might break code logic in certain contrived cases, but should be fine for most code." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZsS-BW-9ui" customClass="JSMkeyPrefButton">
+                            <rect key="frame" x="283" y="153" width="161" height="18"/>
+                            <buttonCell key="cell" type="check" title="&quot;unsafe&quot; optimizations" bezelStyle="regularSquare" imagePosition="left" inset="2" id="PKu-6f-bK5">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="prefKey" value="--compress unsafe"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button toolTip="Apply optimizations for if-s and conditional expressions." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lli-dT-bBW" customClass="JSMkeyPrefButton">
+                            <rect key="frame" x="283" y="173" width="156" height="18"/>
+                            <buttonCell key="cell" type="check" title="Optimize conditionals" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Xde-Hf-uLJ">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="prefKey" value="--compress conditionals"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
                     </subviews>
                 </customView>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ocz-F4-RIB">

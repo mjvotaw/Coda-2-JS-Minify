@@ -51,19 +51,19 @@ static JSMDb * sharedDb;
         error = [_delegate createPersistantStorageDirectory];
         if(error)
         {
-            //DDLogError(@"JSMinify:: Error creating Persistant Storage Directory: %@", error);
+            [_delegate logError:[NSString stringWithFormat: @"JSMinify:: Error creating Persistant Storage Directory: %@", error] ];
             return false;
         }
     }
     NSString * path = [_delegate.pluginBundle pathForResource:name ofType:type];
-    //DDLogError(@"JSMinify:: path for resource: %@",path);
+    [_delegate logError:[NSString stringWithFormat: @"JSMinify:: path for resource: %@",path] ];
     error = [_delegate copyFileToPersistantStorage:path];
     if(error)
     {
-        //DDLogError(@"JSMinify:: Error creating file %@.%@: %@",name,type, error);
+        [_delegate logError:[NSString stringWithFormat: @"JSMinify:: Error creating file %@.%@: %@",name,type, error] ];
         return false;
     }
-    //DDLogError(@"JSMinify:: Successfully created file %@.%@", name, type);
+    [_delegate logError:[NSString stringWithFormat: @"JSMinify:: Successfully created file %@.%@", name, type] ];
     
     
     return true;
@@ -126,7 +126,7 @@ static JSMDb * sharedDb;
 
 -(void) registerFile:(NSURL *)url
 {
-    //DDLogVerbose(@"JSMinify:: registering file: %@", url);
+    [_delegate logMessage:[NSString stringWithFormat: @"JSMinify:: registering file: %@", url] ];
     if(url == nil)
     {
         return;

@@ -31,6 +31,7 @@
     _pluginBundle = p;
     _bundle = [NSBundle bundleWithIdentifier:[p bundleIdentifier]];
     currentSiteUUID = @"*";
+    [self setupLogging];
 	return self;
 }
 
@@ -258,7 +259,6 @@
 
 -(NSArray *) loadNibNamed:(NSString *)nibName
 {
-    //DDLogVerbose(@"JSMinify:: loading nib: %@", nibName);
     NSMutableArray * nibObjects = [NSMutableArray array];
     if([_bundle respondsToSelector:@selector(loadNibNamed:owner:topLevelObjects:)])
     {
@@ -274,6 +274,32 @@
     return nibObjects;
 }
 
+
+#pragma mark - system logging
+
+-(void) setupLogging
+{
+    
+    logClient = asl_open([[self name] UTF8String] , "com.apple.console", 0);
+    
+    msg = asl_new(ASL_TYPE_MSG);
+    asl_set(msg, ASL_KEY_FACILITY, "com.apple.console");
+    asl_set(msg, ASL_KEY_LEVEL, ASL_STRING_NOTICE);
+    asl_set(msg, ASL_KEY_READ_UID, "-1");
+}
+
+-(void) logMessage:(NSString *)message
+{
+    if(self.verboseLogging)
+    {
+        asl_log(logClient, msg, 7, [message UTF8String]);
+    }
+}
+
+-(void) logError:(NSString *)errorMessage
+{
+    asl_log(logClient, msg, 3, [errorMessage UTF8String]);
+}
 
 #pragma mark - other helpers
 
