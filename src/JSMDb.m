@@ -260,9 +260,14 @@ static JSMDb * sharedDb;
     if (_persistentStoreCoordinator != nil) {
         return _persistentStoreCoordinator;
     }
-    
+
+    if(![_delegate doesPersistantStorageDirectoryExist])
+    {
+        [_delegate createPersistantStorageDirectory];
+    }
     NSURL *storeURL = [_delegate urlForPeristantFilePath:@"db_core_data.sqlite"];
     NSError *error = nil;
+
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:@{NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES} error:&error]) {
         /*
