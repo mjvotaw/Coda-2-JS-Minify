@@ -9,8 +9,10 @@ If you haven't, [check out Coda as well!](http://panic.com/coda/)
 
 Installation
 ------------
-(Recommended) [Install Through Coda's Site](https://panic.com/coda/plugins.php?id=130)
+[(Recommended) Install the lastest stable version straight from Panic!](https://panic.com/coda/plugins.php?id=130)
+
 OR
+
 [Download and manually install the plugin from github](https://github.com/mjvotaw/Coda-2-JS-Minify/raw/master/JSMinify.codaplugin.zip)
 
 What does this do?
