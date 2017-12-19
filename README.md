@@ -1,3 +1,6 @@
+(Please note: this plugin is no longer being actively maintained. I'm not sure whether it works with current versions of Coda, so use at your own risk! If you'd like to make changes/updates, I'm more than happy to merge pull requests)
+=========
+
 Coda-2-JS-Minify
 ====================
 
